@@ -1,3 +1,5 @@
 cmake_minimum_required(VERSION 2.5)
 project(TIGER)
+include_directories("${PROJECT_SOURCE_DIR}")
+link_directories("${PROJECT_SOURCE_DIR}/thirdparty/zlog/lib")
 add_subdirectory(proj bin)
