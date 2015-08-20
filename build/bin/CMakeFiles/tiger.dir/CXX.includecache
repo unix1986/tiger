@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../thirdparty/zlog/include/zlog.h
+stdarg.h
+-
+stdio.h
+-
+
+/home/wangjingjing/tiger/proj/main.cpp
+stdio.h
+-
+stdlib.h
+-
+thirdparty/zlog/include/zlog.h
+/home/wangjingjing/tiger/proj/thirdparty/zlog/include/zlog.h
+

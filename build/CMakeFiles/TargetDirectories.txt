@@ -1,0 +1,4 @@
+/home/wangjingjing/tiger/build/bin/CMakeFiles/gflagstest.dir
+/home/wangjingjing/tiger/build/bin/CMakeFiles/jsontest.dir
+/home/wangjingjing/tiger/build/bin/CMakeFiles/server.dir
+/home/wangjingjing/tiger/build/bin/CMakeFiles/tiger.dir
