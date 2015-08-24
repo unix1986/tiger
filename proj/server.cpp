@@ -44,7 +44,7 @@ void error_cb(struct bufferevent *bev, short error, void *ctx) {
     } else if (error & BEV_EVENT_ERROR) {
         perror(ip);
     } else if (error & BEV_EVENT_TIMEOUT) {
-        printf("%s timeout.\n");
+        printf("%s timeout.\n", ip);
         return;
     }
     bufferevent_free(bev);
