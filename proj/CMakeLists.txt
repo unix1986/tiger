@@ -1,6 +1,7 @@
 add_executable(tiger main.cpp)
 target_link_libraries(tiger zlog pthread)
 add_executable(server server.cpp)
+target_include_directories(server BEFORE PRIVATE "${PROJECT_SOURCE_DIR}/thirdparty/libevent/include")
 target_link_libraries(server event)
 add_executable(jsontest jsontest.cpp)
 target_link_libraries(jsontest jsoncpp)
