@@ -19,4 +19,4 @@ link_directories(../thirdparty/gflags/lib)
 link_directories(../thirdparty/jsoncpp/lib)
 link_directories(../thirdparty/zlog/lib)
 # subproject
-include(Proj.cmake)
+include(proj.cmake)
