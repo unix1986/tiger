@@ -1,0 +1,8 @@
+add_executable(server ../proj/server.cpp)
+target_link_libraries(server event pthread)
+add_executable(gflagstest ../proj/gflagstest.cpp)
+target_link_libraries(gflagstest gflags)
+add_executable(zlogtest ../proj/main.cpp)
+target_link_libraries(zlogtest zlog)
+add_executable(jsoncpptest ../proj/jsontest.cpp)
+target_link_libraries(jsoncpptest jsoncpp)
