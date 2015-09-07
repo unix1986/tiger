@@ -1,12 +1,16 @@
-add_executable(tiger main.cpp)
-#target_include_directories(tiger
+add_executable(main main.cpp)
+#target_include_directories(main
 #PRIVATE -I${THIRDPARTY_LIB_PATH}/zlog/include)
-target_link_libraries(tiger
+target_link_libraries(main
 -Wl,-Bstatic
 -L${THIRDPARTY_LIB_PATH}/zlog/lib -lzlog
 -Wl,-Bdynamic
 -lpthread
 )
+
+add_custom_target(MYLS
+COMMAND ls -al .
+WORKING_DIRECTORY ${PROJECT_SOURCE_DIR})
 
 add_executable(server server.cpp)
 target_link_libraries(server
@@ -31,3 +35,13 @@ target_link_libraries(gflagstest
 -Wl,-Bdynamic
 -lpthread
 )
+
+add_executable(template template.cpp)
+target_link_libraries(template tiger
+-Wl,-Bstatic
+-L${THIRDPARTY_LIB_PATH}/gflags/lib -lgflags
+-L${THIRDPARTY_LIB_PATH}/zlog/lib -lzlog
+-Wl,-Bdynamic
+-lpthread
+)
+add_dependencies(template tiger)

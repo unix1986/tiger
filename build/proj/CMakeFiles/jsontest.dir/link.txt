@@ -1,1 +1,0 @@
-/usr/bin/c++   -v -g    CMakeFiles/jsontest.dir/jsontest.o  -o ../bin/jsontest -rdynamic -Wl,-Bstatic -L/home/wangjingjing/tiger/thirdparty/jsoncpp/lib -ljsoncpp -Wl,-Bdynamic 
