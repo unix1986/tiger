@@ -1,0 +1,1 @@
+/usr/bin/c++   -g    CMakeFiles/server.dir/server.o  -o ../bin/server -rdynamic -Wl,-Bstatic -L/home/wangjingjing/tiger/thirdparty/libevent/lib -levent -Wl,-Bdynamic -lrt 

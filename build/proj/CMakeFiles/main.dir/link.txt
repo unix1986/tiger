@@ -1,0 +1,1 @@
+/usr/bin/c++   -g    CMakeFiles/main.dir/main.o  -o ../bin/main -rdynamic -Wl,-Bstatic -L/home/wangjingjing/tiger/thirdparty/zlog/lib -lzlog -Wl,-Bdynamic -lpthread 

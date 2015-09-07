@@ -1,0 +1,1 @@
+/usr/bin/c++   -g    CMakeFiles/template.dir/template.o  -o ../bin/template -rdynamic ../lib/libtiger.a -Wl,-Bstatic -L/home/wangjingjing/tiger/thirdparty/gflags/lib -lgflags -L/home/wangjingjing/tiger/thirdparty/zlog/lib -lzlog -Wl,-Bdynamic -lpthread 

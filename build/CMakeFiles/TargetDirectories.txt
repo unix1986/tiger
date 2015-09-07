@@ -1,0 +1,7 @@
+/home/wangjingjing/tiger/build/proj/CMakeFiles/MYLS.dir
+/home/wangjingjing/tiger/build/proj/CMakeFiles/gflagstest.dir
+/home/wangjingjing/tiger/build/proj/CMakeFiles/jsontest.dir
+/home/wangjingjing/tiger/build/proj/CMakeFiles/main.dir
+/home/wangjingjing/tiger/build/proj/CMakeFiles/server.dir
+/home/wangjingjing/tiger/build/proj/CMakeFiles/template.dir
+/home/wangjingjing/tiger/build/common/framework/CMakeFiles/tiger.dir
