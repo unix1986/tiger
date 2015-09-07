@@ -1,15 +1,17 @@
 cmake_minimum_required(VERSION 2.5)
-project(TIGER CXX)
+project(TIGER C CXX)
 
 set(CMAKE_BUILD_TYPE Debug)
-#set(CMAKE_C_FLAGS "-static")
-#set(CMAKE_CXX_FLAGS "-static")
+
 set(CMAKE_INCLUDE_DIRECTORIES_BEFORE on)
 set(CMAKE_LINK_DIRECTORIES_BEFORE on)
 
+set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
+set(LIBRARY_OUTPUT_PATH lib)
+
+set(THIRDPARTY_LIB_PATH "${PROJECT_SOURCE_DIR}/thirdparty"
+    CACHE PATH "thirdparty directory")
+
 include_directories("${PROJECT_SOURCE_DIR}")
-link_directories("${PROJECT_SOURCE_DIR}/thirdparty/zlog/lib")
-link_directories("${PROJECT_SOURCE_DIR}/thirdparty/libevent/lib")
-link_directories("${PROJECT_SOURCE_DIR}/thirdparty/jsoncpp/lib")
-link_directories("${PROJECT_SOURCE_DIR}/thirdparty/gflags/lib")
-add_subdirectory(proj bin)
+
+add_subdirectory(proj)
