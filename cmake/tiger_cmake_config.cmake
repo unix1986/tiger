@@ -15,3 +15,5 @@ set(TIGER_TOOL_PATH ${CMAKE_SOURCE_DIR}/tool
     CACHE PATH "tiger tool directory")
 set(TIGER_PB_OUTPUT_PATH ${CMAKE_BINARY_DIR}/pb_srcs
     CACHE PATH "tiger pb code directory")
+set(TIGER_TF_OUTPUT_PATH ${CMAKE_BINARY_DIR}/tf_srcs
+    CACHE PATH "tiger pb code directory")

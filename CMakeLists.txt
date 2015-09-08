@@ -6,11 +6,11 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${PROJECT_SOURCE_DIR}/cmake)
 include(tiger_cmake_config)
 include(tiger_policy NO_POLICY_SCOPE)
 include(tiger_macro)
-COMPILE_PB_PATH(proj/pb_files)
 
 include_directories(
     "${PROJECT_SOURCE_DIR}"
     "${TIGER_PB_OUTPUT_PATH}"
+    "${TIGER_TF_OUTPUT_PATH}"
 )
 
 add_subdirectory(common/framework)

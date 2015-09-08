@@ -44,6 +44,7 @@ target_link_libraries(template tiger
 )
 add_dependencies(template tiger)
 
+COMPILE_PB_PATH(pb_files)
 add_executable(pb_test pb_test.cpp
 ${TIGER_PB_OUTPUT_PATH}/proj/pb_files/test.pb.cc)
 target_include_directories(pb_test
@@ -58,3 +59,4 @@ target_link_libraries(pb_test tiger
 -lpthread
 )
 add_dependencies(pb_test tiger)
+COMPILE_TF_PATH(tf_files)
