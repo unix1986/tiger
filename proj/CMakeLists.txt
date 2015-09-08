@@ -1,9 +1,7 @@
 add_executable(main main.cpp)
-#target_include_directories(main
-#PRIVATE -I${THIRDPARTY_LIB_PATH}/zlog/include)
 target_link_libraries(main
 -Wl,-Bstatic
--L${THIRDPARTY_LIB_PATH}/zlog/lib -lzlog
+-L${TIGER_THIRDPARTY_LIB_PATH}/zlog/lib -lzlog
 -Wl,-Bdynamic
 -lpthread
 )
@@ -15,7 +13,7 @@ WORKING_DIRECTORY ${PROJECT_SOURCE_DIR})
 add_executable(server server.cpp)
 target_link_libraries(server
 -Wl,-Bstatic
--L${THIRDPARTY_LIB_PATH}/libevent/lib -levent
+-L${TIGER_THIRDPARTY_LIB_PATH}/libevent/lib -levent
 -Wl,-Bdynamic
 -lrt
 )
@@ -23,7 +21,7 @@ target_link_libraries(server
 add_executable(jsontest jsontest.cpp)
 target_link_libraries(jsontest
 -Wl,-Bstatic
--L${THIRDPARTY_LIB_PATH}/jsoncpp/lib -ljsoncpp
+-L${TIGER_THIRDPARTY_LIB_PATH}/jsoncpp/lib -ljsoncpp
 -Wl,-Bdynamic
 )
 
@@ -31,7 +29,7 @@ target_link_libraries(jsontest
 add_executable(gflagstest gflagstest.cpp)
 target_link_libraries(gflagstest
 -Wl,-Bstatic
--L${THIRDPARTY_LIB_PATH}/gflags/lib -lgflags
+-L${TIGER_THIRDPARTY_LIB_PATH}/gflags/lib -lgflags
 -Wl,-Bdynamic
 -lpthread
 )
@@ -39,9 +37,24 @@ target_link_libraries(gflagstest
 add_executable(template template.cpp)
 target_link_libraries(template tiger
 -Wl,-Bstatic
--L${THIRDPARTY_LIB_PATH}/gflags/lib -lgflags
--L${THIRDPARTY_LIB_PATH}/zlog/lib -lzlog
+-L${TIGER_THIRDPARTY_LIB_PATH}/gflags/lib -lgflags
+-L${TIGER_THIRDPARTY_LIB_PATH}/zlog/lib -lzlog
 -Wl,-Bdynamic
 -lpthread
 )
 add_dependencies(template tiger)
+
+add_executable(pb_test pb_test.cpp
+${TIGER_PB_OUTPUT_PATH}/proj/pb_files/test.pb.cc)
+target_include_directories(pb_test
+PRIVATE ${TIGER_THIRDPARTY_LIB_PATH}/protobuf/include
+)
+target_link_libraries(pb_test tiger
+-Wl,-Bstatic
+-L${TIGER_THIRDPARTY_LIB_PATH}/protobuf/lib -lprotobuf
+-L${TIGER_THIRDPARTY_LIB_PATH}/zlog/lib -lzlog
+-L${TIGER_THIRDPARTY_LIB_PATH}/gflags/lib -lgflags
+-Wl,-Bdynamic
+-lpthread
+)
+add_dependencies(pb_test tiger)

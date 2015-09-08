@@ -3,22 +3,15 @@ project(TIGER C CXX)
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${PROJECT_SOURCE_DIR}/cmake)
 
+include(tiger_cmake_config)
 include(tiger_policy NO_POLICY_SCOPE)
+include(tiger_macro)
+COMPILE_PB_PATH(proj/pb_files)
 
-set(CMAKE_BUILD_TYPE Debug)
-
-set(CMAKE_INCLUDE_DIRECTORIES_BEFORE on)
-set(CMAKE_LINK_DIRECTORIES_BEFORE on)
-
-set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
-set(LIBRARY_OUTPUT_PATH ${PROJECT_BINARY_DIR}/lib)
-
-set(THIRDPARTY_LIB_PATH "${PROJECT_SOURCE_DIR}/thirdparty"
-    CACHE PATH "tiger thirdparty directory")
-set(COMMON_LIB_PATH "${PROJECT_SOURCE_DIR}/common"
-    CACHE PATH "tiger common directory")
-
-include_directories("${PROJECT_SOURCE_DIR}")
+include_directories(
+    "${PROJECT_SOURCE_DIR}"
+    "${TIGER_PB_OUTPUT_PATH}"
+)
 
 add_subdirectory(common/framework)
 add_subdirectory(proj)

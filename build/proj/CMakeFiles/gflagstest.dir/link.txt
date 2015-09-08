@@ -1,1 +1,0 @@
-/usr/bin/c++   -g    CMakeFiles/gflagstest.dir/gflagstest.o  -o ../bin/gflagstest -rdynamic -Wl,-Bstatic -L/home/wangjingjing/tiger/thirdparty/gflags/lib -lgflags -Wl,-Bdynamic -lpthread 
