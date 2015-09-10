@@ -4,7 +4,7 @@ project(TIGER C CXX)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH}
     ${PROJECT_SOURCE_DIR}/cmake)
 
-include(tiger_cmake_config)
+include(tiger_config)
 include(tiger_policy NO_POLICY_SCOPE)
 include(tiger_macro)
 
