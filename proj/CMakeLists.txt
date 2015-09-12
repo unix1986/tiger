@@ -11,6 +11,9 @@ COMMAND ls -al .
 WORKING_DIRECTORY ${PROJECT_SOURCE_DIR})
 
 add_executable(server server.cpp)
+target_include_directories(server BEFORE
+PRIVATE ${TIGER_THIRDPARTY_LIB_PATH}/libevent/include
+)
 target_link_libraries(server
 -Wl,-Bstatic
 -L${TIGER_THIRDPARTY_LIB_PATH}/libevent/lib -levent
