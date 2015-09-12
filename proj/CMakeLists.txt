@@ -50,16 +50,43 @@ add_dependencies(template tiger)
 COMPILE_PB_PATH(pb_files)
 add_executable(pb_test pb_test.cpp
 ${TIGER_PB_OUTPUT_PATH}/proj/pb_files/test.pb.cc)
-target_include_directories(pb_test
-PRIVATE ${TIGER_THIRDPARTY_LIB_PATH}/protobuf/include
-)
 target_link_libraries(pb_test tiger
 -Wl,-Bstatic
--L${TIGER_THIRDPARTY_LIB_PATH}/protobuf/lib -lprotobuf
--L${TIGER_THIRDPARTY_LIB_PATH}/zlog/lib -lzlog
--L${TIGER_THIRDPARTY_LIB_PATH}/gflags/lib -lgflags
+-lprotobuf
+-lzlog
+-lgflags
 -Wl,-Bdynamic
 -lpthread
 )
 add_dependencies(pb_test tiger)
 COMPILE_TF_PATH(tf_files)
+
+aux_source_directory(${TIGER_TF_OUTPUT_PATH}/proj/tf_files tf_tutorial_src_list)
+REMOVE_ITEM_REGEX(tf_tutorial_src_list ".*.skeleton.cpp")
+add_library(tf_tutorial STATIC ${tf_tutorial_src_list})
+target_include_directories(tf_tutorial
+PUBLIC ${TIGER_THIRDPARTY_LIB_PATH}/boost/include
+PUBLIC ${TIGER_THIRDPARTY_LIB_PATH}/thrift/include
+)
+target_link_libraries(tf_tutorial
+-Wl,-Bstatic
+-L${TIGER_THIRDPARTY_LIB_PATH}/thrift/lib -lthrift
+-Wl,-Bdynamic
+)
+add_executable(tf_client CppClient.cpp)
+target_link_libraries(tf_client tf_tutorial
+-Wl,-Bstatic
+-lthrift
+-Wl,-Bdynamic
+-lpthread
+)
+add_dependencies(tf_client tf_tutorial)
+
+add_executable(tf_server CppServer.cpp)
+target_link_libraries(tf_server tf_tutorial
+-Wl,-Bstatic
+-lthrift
+-Wl,-Bdynamic
+-lpthread
+)
+add_dependencies(tf_server tf_tutorial)

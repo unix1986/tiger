@@ -74,3 +74,15 @@ macro(COMPILE_TF_PATH_RECURSE tf_path)
     file(GLOB_RECURSE tf_files "${tf_path}/*.thrift")
     COMPILE_TF_FILES("${tf_files}")
 endmacro()
+
+# ###################################################
+# UTIL MACRO
+# ###################################################
+macro(REMOVE_ITEM_REGEX _list _regex)
+    foreach(item ${${_list}})
+        string(REGEX MATCH ${_regex} match_item ${item})
+	if(match_item)
+            list(REMOVE_ITEM ${_list} ${item})
+	endif()
+    endforeach()
+endmacro()
