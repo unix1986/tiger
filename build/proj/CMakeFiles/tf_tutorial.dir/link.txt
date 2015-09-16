@@ -1,0 +1,2 @@
+/usr/bin/ar cr ../lib/libtf_tutorial.a  CMakeFiles/tf_tutorial.dir/__/tf_srcs/proj/tf_files/tutorial_types.o CMakeFiles/tf_tutorial.dir/__/tf_srcs/proj/tf_files/tutorial_constants.o CMakeFiles/tf_tutorial.dir/__/tf_srcs/proj/tf_files/Calculator.o CMakeFiles/tf_tutorial.dir/__/tf_srcs/proj/tf_files/shared_types.o CMakeFiles/tf_tutorial.dir/__/tf_srcs/proj/tf_files/shared_constants.o CMakeFiles/tf_tutorial.dir/__/tf_srcs/proj/tf_files/SharedService.o
+/usr/bin/ranlib ../lib/libtf_tutorial.a

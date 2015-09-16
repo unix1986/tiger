@@ -1,0 +1,269 @@
+The system is: Linux - 2.6.18-308.8.2.el5 - x86_64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags: 
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/home/wangjingjing/tiger/build/CMakeFiles/3.0.0/CompilerIdC/a.out"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /usr/bin/c++ 
+Build flags: 
+Id flags: 
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+
+The CXX compiler identification is GNU, found in "/home/wangjingjing/tiger/build/CMakeFiles/3.0.0/CompilerIdCXX/a.out"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /home/wangjingjing/tiger/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec2882723123/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec2882723123.dir/build.make CMakeFiles/cmTryCompileExec2882723123.dir/build
+gmake[1]: Entering directory `/da2/wangjingjing/tiger/build/CMakeFiles/CMakeTmp'
+/home/wangjingjing/tools/cmake/bin/cmake -E cmake_progress_report /home/wangjingjing/tiger/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2882723123.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2882723123.dir/testCCompiler.c.o   -c /home/wangjingjing/tiger/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTryCompileExec2882723123
+/home/wangjingjing/tools/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2882723123.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec2882723123.dir/testCCompiler.c.o  -o cmTryCompileExec2882723123 -rdynamic 
+gmake[1]: Leaving directory `/da2/wangjingjing/tiger/build/CMakeFiles/CMakeTmp'
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /home/wangjingjing/tiger/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec1934650023/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec1934650023.dir/build.make CMakeFiles/cmTryCompileExec1934650023.dir/build
+gmake[1]: Entering directory `/da2/wangjingjing/tiger/build/CMakeFiles/CMakeTmp'
+/home/wangjingjing/tools/cmake/bin/cmake -E cmake_progress_report /home/wangjingjing/tiger/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1934650023.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1934650023.dir/CMakeCCompilerABI.c.o   -c /home/wangjingjing/tools/cmake/share/cmake-3.0/Modules/CMakeCCompilerABI.c
+Linking C executable cmTryCompileExec1934650023
+/home/wangjingjing/tools/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1934650023.dir/link.txt --verbose=1
+/usr/bin/cc     -v CMakeFiles/cmTryCompileExec1934650023.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec1934650023 -rdynamic  
+使用内建 specs。
+目标：x86_64-redhat-linux
+配置为：../configure --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --enable-shared --enable-threads=posix --enable-checking=release --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-libgcj-multifile --enable-languages=c,c++,objc,obj-c++,java,fortran,ada --enable-java-awt=gtk --disable-dssi --disable-plugin --with-java-home=/usr/lib/jvm/java-1.4.2-gcj-1.4.2.0/jre --with-cpu=generic --host=x86_64-redhat-linux
+线程模型：posix
+gcc 版本 4.1.2 20080704 (Red Hat 4.1.2-55)
+ /usr/libexec/gcc/x86_64-redhat-linux/4.1.2/collect2 --eh-frame-hdr -m elf_x86_64 --hash-style=gnu -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTryCompileExec1934650023 /usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/4.1.2/crtbegin.o -L/home/wangjingjing/tools/ncurse/lib -L/home/wangjingjing/tools/libevent/lib -L/home/wangjingjing/tools/thrift/lib -L/home/wangjingjing/tools/boost/lib -L. -L/home/wangjingjing/tools/openssl/lib -L/home/wangjingjing/tools/glib/lib -L/home/wangjingjing/tools/libffi/lib64/../lib64 -L/home/wangjingjing/tools/readline/lib -L/home/wangjingjing/tools/ncurses5.9/lib -L/home/wangjingjing/tools/png/lib -L/home/wangjingjing/tools/libcurl/lib -L/usr/lib/gcc/x86_64-redhat-linux/4.1.2 -L/usr/lib/gcc/x86_64-redhat-linux/4.1.2 -L/usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 CMakeFiles/cmTryCompileExec1934650023.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-redhat-linux/4.1.2/crtend.o /usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../lib64/crtn.o
+gmake[1]: Leaving directory `/da2/wangjingjing/tiger/build/CMakeFiles/CMakeTmp'
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/wangjingjing/tiger/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/usr/bin/gmake" "cmTryCompileExec1934650023/fast"]
+  ignore line: [/usr/bin/gmake -f CMakeFiles/cmTryCompileExec1934650023.dir/build.make CMakeFiles/cmTryCompileExec1934650023.dir/build]
+  ignore line: [gmake[1]: Entering directory `/da2/wangjingjing/tiger/build/CMakeFiles/CMakeTmp']
+  ignore line: [/home/wangjingjing/tools/cmake/bin/cmake -E cmake_progress_report /home/wangjingjing/tiger/build/CMakeFiles/CMakeTmp/CMakeFiles 1]
+  ignore line: [Building C object CMakeFiles/cmTryCompileExec1934650023.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1934650023.dir/CMakeCCompilerABI.c.o   -c /home/wangjingjing/tools/cmake/share/cmake-3.0/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTryCompileExec1934650023]
+  ignore line: [/home/wangjingjing/tools/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1934650023.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc     -v CMakeFiles/cmTryCompileExec1934650023.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec1934650023 -rdynamic  ]
+  ignore line: [使用内建 specs。]
+  ignore line: [目标：x86_64-redhat-linux]
+  ignore line: [配置为：../configure --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --enable-shared --enable-threads=posix --enable-checking=release --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-libgcj-multifile --enable-languages=c,c++,objc,obj-c++,java,fortran,ada --enable-java-awt=gtk --disable-dssi --disable-plugin --with-java-home=/usr/lib/jvm/java-1.4.2-gcj-1.4.2.0/jre --with-cpu=generic --host=x86_64-redhat-linux]
+  ignore line: [线程模型：posix]
+  ignore line: [gcc 版本 4.1.2 20080704 (Red Hat 4.1.2-55)]
+  link line: [ /usr/libexec/gcc/x86_64-redhat-linux/4.1.2/collect2 --eh-frame-hdr -m elf_x86_64 --hash-style=gnu -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTryCompileExec1934650023 /usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/4.1.2/crtbegin.o -L/home/wangjingjing/tools/ncurse/lib -L/home/wangjingjing/tools/libevent/lib -L/home/wangjingjing/tools/thrift/lib -L/home/wangjingjing/tools/boost/lib -L. -L/home/wangjingjing/tools/openssl/lib -L/home/wangjingjing/tools/glib/lib -L/home/wangjingjing/tools/libffi/lib64/../lib64 -L/home/wangjingjing/tools/readline/lib -L/home/wangjingjing/tools/ncurses5.9/lib -L/home/wangjingjing/tools/png/lib -L/home/wangjingjing/tools/libcurl/lib -L/usr/lib/gcc/x86_64-redhat-linux/4.1.2 -L/usr/lib/gcc/x86_64-redhat-linux/4.1.2 -L/usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 CMakeFiles/cmTryCompileExec1934650023.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-redhat-linux/4.1.2/crtend.o /usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../lib64/crtn.o]
+    arg [/usr/libexec/gcc/x86_64-redhat-linux/4.1.2/collect2] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTryCompileExec1934650023] ==> ignore
+    arg [/usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../lib64/crt1.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../lib64/crti.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-redhat-linux/4.1.2/crtbegin.o] ==> ignore
+    arg [-L/home/wangjingjing/tools/ncurse/lib] ==> dir [/home/wangjingjing/tools/ncurse/lib]
+    arg [-L/home/wangjingjing/tools/libevent/lib] ==> dir [/home/wangjingjing/tools/libevent/lib]
+    arg [-L/home/wangjingjing/tools/thrift/lib] ==> dir [/home/wangjingjing/tools/thrift/lib]
+    arg [-L/home/wangjingjing/tools/boost/lib] ==> dir [/home/wangjingjing/tools/boost/lib]
+    arg [-L.] ==> ignore
+    arg [-L/home/wangjingjing/tools/openssl/lib] ==> dir [/home/wangjingjing/tools/openssl/lib]
+    arg [-L/home/wangjingjing/tools/glib/lib] ==> dir [/home/wangjingjing/tools/glib/lib]
+    arg [-L/home/wangjingjing/tools/libffi/lib64/../lib64] ==> dir [/home/wangjingjing/tools/libffi/lib64/../lib64]
+    arg [-L/home/wangjingjing/tools/readline/lib] ==> dir [/home/wangjingjing/tools/readline/lib]
+    arg [-L/home/wangjingjing/tools/ncurses5.9/lib] ==> dir [/home/wangjingjing/tools/ncurses5.9/lib]
+    arg [-L/home/wangjingjing/tools/png/lib] ==> dir [/home/wangjingjing/tools/png/lib]
+    arg [-L/home/wangjingjing/tools/libcurl/lib] ==> dir [/home/wangjingjing/tools/libcurl/lib]
+    arg [-L/usr/lib/gcc/x86_64-redhat-linux/4.1.2] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/4.1.2]
+    arg [-L/usr/lib/gcc/x86_64-redhat-linux/4.1.2] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/4.1.2]
+    arg [-L/usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../lib64] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../lib64]
+    arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+    arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+    arg [CMakeFiles/cmTryCompileExec1934650023.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [/usr/lib/gcc/x86_64-redhat-linux/4.1.2/crtend.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../lib64/crtn.o] ==> ignore
+  remove lib [gcc]
+  remove lib [gcc_s]
+  remove lib [gcc]
+  remove lib [gcc_s]
+  collapse library dir [/home/wangjingjing/tools/ncurse/lib] ==> [/home/wangjingjing/tools/ncurse/lib]
+  collapse library dir [/home/wangjingjing/tools/libevent/lib] ==> [/home/wangjingjing/tools/libevent/lib]
+  collapse library dir [/home/wangjingjing/tools/thrift/lib] ==> [/home/wangjingjing/tools/thrift/lib]
+  collapse library dir [/home/wangjingjing/tools/boost/lib] ==> [/home/wangjingjing/tools/boost/lib]
+  collapse library dir [/home/wangjingjing/tools/openssl/lib] ==> [/home/wangjingjing/tools/openssl/lib]
+  collapse library dir [/home/wangjingjing/tools/glib/lib] ==> [/home/wangjingjing/tools/glib/lib]
+  collapse library dir [/home/wangjingjing/tools/libffi/lib64/../lib64] ==> [/home/wangjingjing/tools/libffi/lib64]
+  collapse library dir [/home/wangjingjing/tools/readline/lib] ==> [/home/wangjingjing/tools/readline/lib]
+  collapse library dir [/home/wangjingjing/tools/ncurses5.9/lib] ==> [/home/wangjingjing/tools/ncurses5.9/lib]
+  collapse library dir [/home/wangjingjing/tools/png/lib] ==> [/home/wangjingjing/tools/png/lib]
+  collapse library dir [/home/wangjingjing/tools/libcurl/lib] ==> [/home/wangjingjing/tools/libcurl/lib]
+  collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/4.1.2] ==> [/usr/lib/gcc/x86_64-redhat-linux/4.1.2]
+  collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/4.1.2] ==> [/usr/lib/gcc/x86_64-redhat-linux/4.1.2]
+  collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../lib64] ==> [/usr/lib64]
+  collapse library dir [/lib/../lib64] ==> [/lib64]
+  collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+  implicit libs: [c]
+  implicit dirs: [/home/wangjingjing/tools/ncurse/lib;/home/wangjingjing/tools/libevent/lib;/home/wangjingjing/tools/thrift/lib;/home/wangjingjing/tools/boost/lib;/home/wangjingjing/tools/openssl/lib;/home/wangjingjing/tools/glib/lib;/home/wangjingjing/tools/libffi/lib64;/home/wangjingjing/tools/readline/lib;/home/wangjingjing/tools/ncurses5.9/lib;/home/wangjingjing/tools/png/lib;/home/wangjingjing/tools/libcurl/lib;/usr/lib/gcc/x86_64-redhat-linux/4.1.2;/usr/lib64;/lib64]
+  implicit fwks: []
+
+
+Determining if the CXX compiler works passed with the following output:
+Change Dir: /home/wangjingjing/tiger/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec3664965690/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3664965690.dir/build.make CMakeFiles/cmTryCompileExec3664965690.dir/build
+gmake[1]: Entering directory `/da2/wangjingjing/tiger/build/CMakeFiles/CMakeTmp'
+/home/wangjingjing/tools/cmake/bin/cmake -E cmake_progress_report /home/wangjingjing/tiger/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec3664965690.dir/testCXXCompiler.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTryCompileExec3664965690.dir/testCXXCompiler.cxx.o -c /home/wangjingjing/tiger/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTryCompileExec3664965690
+/home/wangjingjing/tools/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3664965690.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTryCompileExec3664965690.dir/testCXXCompiler.cxx.o  -o cmTryCompileExec3664965690 -rdynamic 
+gmake[1]: Leaving directory `/da2/wangjingjing/tiger/build/CMakeFiles/CMakeTmp'
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /home/wangjingjing/tiger/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec3710140913/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3710140913.dir/build.make CMakeFiles/cmTryCompileExec3710140913.dir/build
+gmake[1]: Entering directory `/da2/wangjingjing/tiger/build/CMakeFiles/CMakeTmp'
+/home/wangjingjing/tools/cmake/bin/cmake -E cmake_progress_report /home/wangjingjing/tiger/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec3710140913.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++     -o CMakeFiles/cmTryCompileExec3710140913.dir/CMakeCXXCompilerABI.cpp.o -c /home/wangjingjing/tools/cmake/share/cmake-3.0/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTryCompileExec3710140913
+/home/wangjingjing/tools/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3710140913.dir/link.txt --verbose=1
+/usr/bin/c++      -v CMakeFiles/cmTryCompileExec3710140913.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec3710140913 -rdynamic  
+使用内建 specs。
+目标：x86_64-redhat-linux
+配置为：../configure --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --enable-shared --enable-threads=posix --enable-checking=release --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-libgcj-multifile --enable-languages=c,c++,objc,obj-c++,java,fortran,ada --enable-java-awt=gtk --disable-dssi --disable-plugin --with-java-home=/usr/lib/jvm/java-1.4.2-gcj-1.4.2.0/jre --with-cpu=generic --host=x86_64-redhat-linux
+线程模型：posix
+gcc 版本 4.1.2 20080704 (Red Hat 4.1.2-55)
+ /usr/libexec/gcc/x86_64-redhat-linux/4.1.2/collect2 --eh-frame-hdr -m elf_x86_64 --hash-style=gnu -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTryCompileExec3710140913 /usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/4.1.2/crtbegin.o -L/home/wangjingjing/tools/ncurse/lib -L/home/wangjingjing/tools/libevent/lib -L/home/wangjingjing/tools/thrift/lib -L/home/wangjingjing/tools/boost/lib -L. -L/home/wangjingjing/tools/openssl/lib -L/home/wangjingjing/tools/glib/lib -L/home/wangjingjing/tools/libffi/lib64/../lib64 -L/home/wangjingjing/tools/readline/lib -L/home/wangjingjing/tools/ncurses5.9/lib -L/home/wangjingjing/tools/png/lib -L/home/wangjingjing/tools/libcurl/lib -L/usr/lib/gcc/x86_64-redhat-linux/4.1.2 -L/usr/lib/gcc/x86_64-redhat-linux/4.1.2 -L/usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 CMakeFiles/cmTryCompileExec3710140913.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/4.1.2/crtend.o /usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../lib64/crtn.o
+gmake[1]: Leaving directory `/da2/wangjingjing/tiger/build/CMakeFiles/CMakeTmp'
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/wangjingjing/tiger/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/usr/bin/gmake" "cmTryCompileExec3710140913/fast"]
+  ignore line: [/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3710140913.dir/build.make CMakeFiles/cmTryCompileExec3710140913.dir/build]
+  ignore line: [gmake[1]: Entering directory `/da2/wangjingjing/tiger/build/CMakeFiles/CMakeTmp']
+  ignore line: [/home/wangjingjing/tools/cmake/bin/cmake -E cmake_progress_report /home/wangjingjing/tiger/build/CMakeFiles/CMakeTmp/CMakeFiles 1]
+  ignore line: [Building CXX object CMakeFiles/cmTryCompileExec3710140913.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTryCompileExec3710140913.dir/CMakeCXXCompilerABI.cpp.o -c /home/wangjingjing/tools/cmake/share/cmake-3.0/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTryCompileExec3710140913]
+  ignore line: [/home/wangjingjing/tools/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3710140913.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++      -v CMakeFiles/cmTryCompileExec3710140913.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec3710140913 -rdynamic  ]
+  ignore line: [使用内建 specs。]
+  ignore line: [目标：x86_64-redhat-linux]
+  ignore line: [配置为：../configure --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --enable-shared --enable-threads=posix --enable-checking=release --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-libgcj-multifile --enable-languages=c,c++,objc,obj-c++,java,fortran,ada --enable-java-awt=gtk --disable-dssi --disable-plugin --with-java-home=/usr/lib/jvm/java-1.4.2-gcj-1.4.2.0/jre --with-cpu=generic --host=x86_64-redhat-linux]
+  ignore line: [线程模型：posix]
+  ignore line: [gcc 版本 4.1.2 20080704 (Red Hat 4.1.2-55)]
+  link line: [ /usr/libexec/gcc/x86_64-redhat-linux/4.1.2/collect2 --eh-frame-hdr -m elf_x86_64 --hash-style=gnu -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTryCompileExec3710140913 /usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/4.1.2/crtbegin.o -L/home/wangjingjing/tools/ncurse/lib -L/home/wangjingjing/tools/libevent/lib -L/home/wangjingjing/tools/thrift/lib -L/home/wangjingjing/tools/boost/lib -L. -L/home/wangjingjing/tools/openssl/lib -L/home/wangjingjing/tools/glib/lib -L/home/wangjingjing/tools/libffi/lib64/../lib64 -L/home/wangjingjing/tools/readline/lib -L/home/wangjingjing/tools/ncurses5.9/lib -L/home/wangjingjing/tools/png/lib -L/home/wangjingjing/tools/libcurl/lib -L/usr/lib/gcc/x86_64-redhat-linux/4.1.2 -L/usr/lib/gcc/x86_64-redhat-linux/4.1.2 -L/usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 CMakeFiles/cmTryCompileExec3710140913.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/4.1.2/crtend.o /usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../lib64/crtn.o]
+    arg [/usr/libexec/gcc/x86_64-redhat-linux/4.1.2/collect2] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTryCompileExec3710140913] ==> ignore
+    arg [/usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../lib64/crt1.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../lib64/crti.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-redhat-linux/4.1.2/crtbegin.o] ==> ignore
+    arg [-L/home/wangjingjing/tools/ncurse/lib] ==> dir [/home/wangjingjing/tools/ncurse/lib]
+    arg [-L/home/wangjingjing/tools/libevent/lib] ==> dir [/home/wangjingjing/tools/libevent/lib]
+    arg [-L/home/wangjingjing/tools/thrift/lib] ==> dir [/home/wangjingjing/tools/thrift/lib]
+    arg [-L/home/wangjingjing/tools/boost/lib] ==> dir [/home/wangjingjing/tools/boost/lib]
+    arg [-L.] ==> ignore
+    arg [-L/home/wangjingjing/tools/openssl/lib] ==> dir [/home/wangjingjing/tools/openssl/lib]
+    arg [-L/home/wangjingjing/tools/glib/lib] ==> dir [/home/wangjingjing/tools/glib/lib]
+    arg [-L/home/wangjingjing/tools/libffi/lib64/../lib64] ==> dir [/home/wangjingjing/tools/libffi/lib64/../lib64]
+    arg [-L/home/wangjingjing/tools/readline/lib] ==> dir [/home/wangjingjing/tools/readline/lib]
+    arg [-L/home/wangjingjing/tools/ncurses5.9/lib] ==> dir [/home/wangjingjing/tools/ncurses5.9/lib]
+    arg [-L/home/wangjingjing/tools/png/lib] ==> dir [/home/wangjingjing/tools/png/lib]
+    arg [-L/home/wangjingjing/tools/libcurl/lib] ==> dir [/home/wangjingjing/tools/libcurl/lib]
+    arg [-L/usr/lib/gcc/x86_64-redhat-linux/4.1.2] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/4.1.2]
+    arg [-L/usr/lib/gcc/x86_64-redhat-linux/4.1.2] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/4.1.2]
+    arg [-L/usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../lib64] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../lib64]
+    arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+    arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+    arg [CMakeFiles/cmTryCompileExec3710140913.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-lstdc++] ==> lib [stdc++]
+    arg [-lm] ==> lib [m]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [/usr/lib/gcc/x86_64-redhat-linux/4.1.2/crtend.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../lib64/crtn.o] ==> ignore
+  remove lib [gcc_s]
+  remove lib [gcc]
+  remove lib [gcc_s]
+  remove lib [gcc]
+  collapse library dir [/home/wangjingjing/tools/ncurse/lib] ==> [/home/wangjingjing/tools/ncurse/lib]
+  collapse library dir [/home/wangjingjing/tools/libevent/lib] ==> [/home/wangjingjing/tools/libevent/lib]
+  collapse library dir [/home/wangjingjing/tools/thrift/lib] ==> [/home/wangjingjing/tools/thrift/lib]
+  collapse library dir [/home/wangjingjing/tools/boost/lib] ==> [/home/wangjingjing/tools/boost/lib]
+  collapse library dir [/home/wangjingjing/tools/openssl/lib] ==> [/home/wangjingjing/tools/openssl/lib]
+  collapse library dir [/home/wangjingjing/tools/glib/lib] ==> [/home/wangjingjing/tools/glib/lib]
+  collapse library dir [/home/wangjingjing/tools/libffi/lib64/../lib64] ==> [/home/wangjingjing/tools/libffi/lib64]
+  collapse library dir [/home/wangjingjing/tools/readline/lib] ==> [/home/wangjingjing/tools/readline/lib]
+  collapse library dir [/home/wangjingjing/tools/ncurses5.9/lib] ==> [/home/wangjingjing/tools/ncurses5.9/lib]
+  collapse library dir [/home/wangjingjing/tools/png/lib] ==> [/home/wangjingjing/tools/png/lib]
+  collapse library dir [/home/wangjingjing/tools/libcurl/lib] ==> [/home/wangjingjing/tools/libcurl/lib]
+  collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/4.1.2] ==> [/usr/lib/gcc/x86_64-redhat-linux/4.1.2]
+  collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/4.1.2] ==> [/usr/lib/gcc/x86_64-redhat-linux/4.1.2]
+  collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../lib64] ==> [/usr/lib64]
+  collapse library dir [/lib/../lib64] ==> [/lib64]
+  collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+  implicit libs: [stdc++;m;c]
+  implicit dirs: [/home/wangjingjing/tools/ncurse/lib;/home/wangjingjing/tools/libevent/lib;/home/wangjingjing/tools/thrift/lib;/home/wangjingjing/tools/boost/lib;/home/wangjingjing/tools/openssl/lib;/home/wangjingjing/tools/glib/lib;/home/wangjingjing/tools/libffi/lib64;/home/wangjingjing/tools/readline/lib;/home/wangjingjing/tools/ncurses5.9/lib;/home/wangjingjing/tools/png/lib;/home/wangjingjing/tools/libcurl/lib;/usr/lib/gcc/x86_64-redhat-linux/4.1.2;/usr/lib64;/lib64]
+  implicit fwks: []
+
+
