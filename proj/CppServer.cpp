@@ -23,6 +23,7 @@
 #include <thrift/server/TSimpleServer.h>
 #include <thrift/server/TThreadPoolServer.h>
 #include <thrift/server/TThreadedServer.h>
+#include <thrift/server/TNonblockingServer.h>
 #include <thrift/transport/TServerSocket.h>
 #include <thrift/transport/TSocket.h>
 #include <thrift/transport/TTransportUtils.h>
@@ -35,6 +36,8 @@
 #include <sstream>
 
 #include "proj/tf_files/Calculator.h"
+#include <unistd.h>
+#include <sys/syscall.h>
 
 using namespace std;
 using namespace apache::thrift;
@@ -45,12 +48,25 @@ using namespace apache::thrift::server;
 
 using namespace tutorial;
 using namespace shared;
-
+volatile int _G_flag = 0;
 class CalculatorHandler : public CalculatorIf {
 public:
   CalculatorHandler() {}
 
-  void ping() { cout << "ping()" << endl; }
+  void ping() { cout << "ping()" << endl; 
+  cout << "tid: " << syscall(SYS_gettid) << endl;
+  #ifdef HUNG_UP1
+    if (_G_flag++ % 2 == 0) {
+        sleep(12000);
+    }
+  #endif
+  #ifdef HUNG_UP2
+    if (_G_flag++ % 2 == 1) {
+        sleep(12000);
+    }
+  #endif
+    sleep(20);
+  }
 
   int32_t add(const int32_t n1, const int32_t n2) {
     cout << "add(" << n1 << ", " << n2 << ")" << endl;
@@ -132,12 +148,12 @@ class CalculatorCloneFactory : virtual public CalculatorIfFactory {
 };
 
 int main() {
-  TThreadedServer server(
+/*  TThreadedServer server(
     boost::make_shared<CalculatorProcessorFactory>(boost::make_shared<CalculatorCloneFactory>()),
     boost::make_shared<TServerSocket>(9090), //port
     boost::make_shared<TBufferedTransportFactory>(),
     boost::make_shared<TBinaryProtocolFactory>());
-
+*/
   /*
   // if you don't need per-connection state, do the following instead
   TThreadedServer server(
@@ -147,35 +163,64 @@ int main() {
     boost::make_shared<TBinaryProtocolFactory>());
   */
 
-  /**
-   * Here are some alternate server types...
+ //  * Here are some alternate server types...
 
   // This server only allows one connection at a time, but spawns no threads
-  TSimpleServer server(
+/*  TSimpleServer server(
     boost::make_shared<CalculatorProcessor>(boost::make_shared<CalculatorHandler>()),
     boost::make_shared<TServerSocket>(9090),
     boost::make_shared<TBufferedTransportFactory>(),
     boost::make_shared<TBinaryProtocolFactory>());
-
-  const int workerCount = 4;
+*/
+  /*const int workerCount = 4;
 
   boost::shared_ptr<ThreadManager> threadManager =
-    ThreadManager::newSimpleThreadManager(workerCount);
+    ThreadManager::newSimpleThreadManager(workerCount, 100);
   threadManager->threadFactory(
     boost::make_shared<PlatformThreadFactory>());
-  threadManager->start();
+  threadManager->start();*/
 
   // This server allows "workerCount" connection at a time, and reuses threads
-  TThreadPoolServer server(
+  /*TThreadPoolServer server(
     boost::make_shared<CalculatorProcessorFactory>(boost::make_shared<CalculatorCloneFactory>()),
     boost::make_shared<TServerSocket>(9090),
     boost::make_shared<TBufferedTransportFactory>(),
     boost::make_shared<TBinaryProtocolFactory>(),
-    threadManager);
-  */
+    threadManager);*/
+  //boost::shared_ptr<ThreadManager> threadManager =
+    //ThreadManager::newSimpleThreadManager(2);
+  //threadManager->threadFactory(
+    //boost::make_shared<PlatformThreadFactory>());
+  //threadManager->start();
+  /*TNonblockingServer server(
+    boost::make_shared<CalculatorProcessorFactory>(boost::make_shared<CalculatorCloneFactory>()),
+    boost::make_shared<TBinaryProtocolFactory>(),
+    9090);
+    //threadManager);
+  server.setNumIOThreads(2);*/
+
+  /*boost::shared_ptr<ThreadManager> threadManager =
+    ThreadManager::newSimpleThreadManager(3);
+  threadManager->threadFactory(
+    boost::make_shared<PlatformThreadFactory>());
+  threadManager->start();
+  TNonblockingServer server(
+    boost::make_shared<CalculatorProcessorFactory>(boost::make_shared<CalculatorCloneFactory>()),
+    boost::make_shared<TBinaryProtocolFactory>(), 9090, threadManager);
+  server.setNumIOThreads(1);*/
+
+  /*最基础的多线程Nonblocking !注意，主线程既是监听线程又是工作线程*/
+  //TNonblockingServer server(
+    //boost::make_shared<CalculatorProcessorFactory>(boost::make_shared<CalculatorCloneFactory>()), 9090);
+  //server.setNumIOThreads(3);
+
+  /*最基础的单线程Nonblocking*/
+  TNonblockingServer server(
+    boost::make_shared<CalculatorProcessorFactory>(boost::make_shared<CalculatorCloneFactory>()), 9090);
 
   cout << "Starting the server..." << endl;
   server.serve();
   cout << "Done." << endl;
   return 0;
+
 }

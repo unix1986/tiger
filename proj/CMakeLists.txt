@@ -85,8 +85,14 @@ add_dependencies(tf_client tf_tutorial)
 add_executable(tf_server CppServer.cpp)
 target_link_libraries(tf_server tf_tutorial
 -Wl,-Bstatic
--lthrift
+-lthriftnb
+-levent
 -Wl,-Bdynamic
+-lrt
 -lpthread
 )
 add_dependencies(tf_server tf_tutorial)
+
+# phony target
+add_custom_target(nbtest)
+add_dependencies(nbtest tf_server tf_client)
