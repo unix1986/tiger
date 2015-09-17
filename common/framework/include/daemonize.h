@@ -3,6 +3,8 @@
 #include <unistd.h>
 #include <fcntl.h>
 #include <signal.h>
+#include <sys/types.h>
+#include <sys/stat.h>
 #include <sys/resource.h>
 
 void daemonize(const char *root_dir = NULL) {

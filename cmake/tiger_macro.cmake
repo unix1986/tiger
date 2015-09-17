@@ -86,3 +86,13 @@ macro(REMOVE_ITEM_REGEX _list _regex)
 	endif()
     endforeach()
 endmacro()
+
+macro(DETACH_DEBUG_INFO_BY_PATH tgt elf_path)
+    add_custom_target(${tgt}
+        COMMAND rm -rf *.dbg &>/dev/null
+        COMMAND ls | xargs -i objcopy --only-keep-debug {} {}.dbg &>/dev/null
+        COMMAND ls -I*.dbg | xargs -i objcopy --strip-debug {} &>/dev/null
+        COMMAND ls -I*.dbg | xargs -i objcopy --add-gnu-debuglink={}.dbg {} &>/dev/null
+        WORKING_DIRECTORY ${elf_path}
+        COMMENT "Detach debug info from binaries. Workdir:${elf_path}")
+endmacro()

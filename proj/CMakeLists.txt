@@ -83,10 +83,14 @@ target_link_libraries(tf_client tf_tutorial
 add_dependencies(tf_client tf_tutorial)
 
 add_executable(tf_server CppServer.cpp)
+target_include_directories(tf_server
+PRIVATE ${TIGER_THIRDPARTY_LIB_PATH}/libevent/include
+)
 target_link_libraries(tf_server tf_tutorial
 -Wl,-Bstatic
 -lthriftnb
--levent
+-lthrift
+-L${TIGER_THIRDPARTY_LIB_PATH}/libevent/lib -levent
 -Wl,-Bdynamic
 -lrt
 -lpthread

@@ -19,10 +19,4 @@ include_directories(
 add_subdirectory(common/framework)
 add_subdirectory(proj)
 
-add_custom_target(detach
-COMMAND rm -rf *.dbg &>/dev/null
-COMMAND ls | xargs -i objcopy --only-keep-debug {} {}.dbg &>/dev/null
-COMMAND ls -I*.dbg | xargs -i objcopy --strip-debug {} &>/dev/null
-COMMAND ls -I*.dbg | xargs -i objcopy --add-gnu-debuglink={}.dbg {} &>/dev/null
-WORKING_DIRECTORY ${PROJECT_BINARY_DIR}/bin
-COMMENT "Detach debug info from binaries")
+DETACH_DEBUG_INFO_BY_PATH(detach "${PROJECT_BINARY_DIR}/bin")
