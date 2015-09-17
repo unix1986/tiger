@@ -1,1 +1,0 @@
-/usr/bin/c++   -g    CMakeFiles/tf_server.dir/CppServer.o  -o ../bin/tf_server -rdynamic ../lib/libtf_tutorial.a -Wl,-Bstatic -lthriftnb -levent -Wl,-Bdynamic -lrt -lpthread -L/home/wangjingjing/tiger/thirdparty/thrift/lib -lthrift 

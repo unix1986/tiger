@@ -1,1 +1,0 @@
-/usr/bin/c++   -g    CMakeFiles/pb_test.dir/pb_test.o CMakeFiles/pb_test.dir/__/pb_srcs/proj/pb_files/test.pb.o  -o ../bin/pb_test -rdynamic ../lib/libtiger.a -Wl,-Bstatic -lprotobuf -lzlog -lgflags -Wl,-Bdynamic -lpthread -L/home/wangjingjing/tiger/thirdparty/zlog/lib -L/home/wangjingjing/tiger/thirdparty/gflags/lib -L/home/wangjingjing/tiger/thirdparty/protobuf/lib 

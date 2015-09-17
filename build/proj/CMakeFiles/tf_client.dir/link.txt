@@ -1,1 +1,0 @@
-/usr/bin/c++   -g    CMakeFiles/tf_client.dir/CppClient.o  -o ../bin/tf_client -rdynamic ../lib/libtf_tutorial.a -Wl,-Bstatic -lthrift -Wl,-Bdynamic -lpthread -L/home/wangjingjing/tiger/thirdparty/thrift/lib 

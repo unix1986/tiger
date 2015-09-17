@@ -1,2 +1,0 @@
-/usr/bin/ar cr ../../lib/libtiger.a  CMakeFiles/tiger.dir/src/tiger.o
-/usr/bin/ranlib ../../lib/libtiger.a
