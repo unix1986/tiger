@@ -49,7 +49,7 @@ add_dependencies(template tiger)
 
 COMPILE_PB_PATH(pb_files)
 add_executable(pb_test EXCLUDE_FROM_ALL pb_test.cpp
-${TIGER_PB_OUTPUT_PATH}/proj/pb_files/test.pb.cc)
+${TIGER_PB_OUTPUT_PATH}/proj/samples/pb_files/test.pb.cc)
 target_link_libraries(pb_test tiger
 -Wl,-Bstatic
 -lprotobuf
@@ -61,7 +61,7 @@ target_link_libraries(pb_test tiger
 add_dependencies(pb_test tiger)
 COMPILE_TF_PATH(tf_files)
 
-aux_source_directory(${TIGER_TF_OUTPUT_PATH}/proj/tf_files tf_tutorial_src_list)
+aux_source_directory(${TIGER_TF_OUTPUT_PATH}/proj/samples/tf_files tf_tutorial_src_list)
 REMOVE_ITEM_REGEX(tf_tutorial_src_list ".*.skeleton.cpp")
 add_library(tf_tutorial STATIC EXCLUDE_FROM_ALL ${tf_tutorial_src_list})
 target_include_directories(tf_tutorial
@@ -100,5 +100,3 @@ add_dependencies(tf_server tf_tutorial)
 # phony target
 add_custom_target(nbtest)
 add_dependencies(nbtest tf_server tf_client)
-
-add_subdirectory(hello_tiger)

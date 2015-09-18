@@ -35,7 +35,7 @@
 #include <stdexcept>
 #include <sstream>
 
-#include "proj/tf_files/Calculator.h"
+#include "proj/samples/tf_files/Calculator.h"
 #include <unistd.h>
 #include <sys/syscall.h>
 

@@ -23,7 +23,7 @@
 #include <thrift/transport/TSocket.h>
 #include <thrift/transport/TTransportUtils.h>
 
-#include "proj/tf_files/Calculator.h"
+#include "proj/samples/tf_files/Calculator.h"
 
 using namespace std;
 using namespace apache::thrift;

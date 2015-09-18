@@ -1,5 +1,5 @@
 #include "common/framework/include/tiger.h"
-#include "proj/pb_files/test.pb.h"
+#include "proj/samples/pb_files/test.pb.h"
 
 int tiger_main(int argc, char *argv[]) {
     Test t;
