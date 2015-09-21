@@ -17,7 +17,7 @@ include_directories(
 )
 
 add_subdirectory(common/framework)
-add_subdirectory(proj/samples)
+add_subdirectory(proj/samples EXCLUDE_FROM_ALL)
 add_subdirectory(proj/hello_tiger)
 
 DETACH_DEBUG_INFO_BY_PATH(detach "${PROJECT_BINARY_DIR}/bin")

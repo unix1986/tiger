@@ -100,3 +100,14 @@ add_dependencies(tf_server tf_tutorial)
 # phony target
 add_custom_target(nbtest)
 add_dependencies(nbtest tf_server tf_client)
+
+add_custom_target(samples ALL)
+add_dependencies(samples
+main
+tf_client
+tf_server
+gflagstest
+jsontest
+pb_test
+template
+)
