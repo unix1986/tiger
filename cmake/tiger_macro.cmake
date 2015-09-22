@@ -78,6 +78,7 @@ endmacro()
 # ###################################################
 # UTIL MACRO
 # ###################################################
+# REMOVE ITEM INCLUDING _regex FROM _list
 macro(REMOVE_ITEM_REGEX _list _regex)
     foreach(item ${${_list}})
         string(REGEX MATCH ${_regex} match_item ${item})
@@ -87,12 +88,34 @@ macro(REMOVE_ITEM_REGEX _list _regex)
     endforeach()
 endmacro()
 
+# DETACH DEBUG INFO TO A SINGLE FILE
 macro(DETACH_DEBUG_INFO_BY_PATH tgt elf_path)
     add_custom_target(${tgt}
         COMMAND rm -rf *.dbg &>/dev/null
         COMMAND ls | xargs -i objcopy --only-keep-debug {} {}.dbg &>/dev/null
         COMMAND ls -I*.dbg | xargs -i objcopy --strip-debug {} &>/dev/null
         COMMAND ls -I*.dbg | xargs -i objcopy --add-gnu-debuglink={}.dbg {} &>/dev/null
+        COMMAND ls *.dbg | xargs -i chmod 0664 {} &>/dev/null
         WORKING_DIRECTORY ${elf_path}
         COMMENT "Detach debug info from binaries. Workdir:${elf_path}")
+endmacro()
+
+# USE EXUBERANT-CTAGS TO MAKE TAGS FOR SOURCE FILES
+macro(ADD_CTAGS)
+    find_program(__tiger_ctags_found__ ctags)
+    if(__tiger_ctags_found__)
+        foreach(item ${ARGV})
+            list(APPEND __tiger_ctags_dir__ "${PROJECT_SOURCE_DIR}/${item}")
+        endforeach()
+        if(ARGC EQUAL 0)
+            set(__tiger_ctags_dir__ "${PROJECT_SOURCE_DIR}")
+        endif()
+        add_custom_target(tags
+            COMMAND find -L ${__tiger_ctags_dir__} -name *.cpp -or -name *.cc -or -name *.c
+                -or -name *.proto -or -name *.thrift -or -name *.h -or -name *.inl 2>/dev/null
+                |xargs ctags --langmap=c++:+.inl.proto.thrift
+            COMMENT "Ctags for source files. Workdir:${__tiger_ctags_dir__}")
+    else()
+        message(STATUS "Ctags not found. Can't use make tags...")
+    endif()
 endmacro()

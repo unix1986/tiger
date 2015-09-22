@@ -21,3 +21,4 @@ add_subdirectory(proj/samples EXCLUDE_FROM_ALL)
 add_subdirectory(proj/hello_tiger)
 
 DETACH_DEBUG_INFO_BY_PATH(detach "${PROJECT_BINARY_DIR}/bin")
+ADD_CTAGS(proj common build/tf_srcs build/pb_srcs)
