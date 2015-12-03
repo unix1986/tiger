@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "common/framework/include/tiger.h"
+#include "common/include/tiger.h"
 
 DEFINE_string(test_str, "hello tiger!", "gflags test");
 

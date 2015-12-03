@@ -7,7 +7,7 @@ PUBLIC ${TIGER_THIRDPARTY_LIB_PATH}/thrift/include
 PUBLIC ${TIGER_THIRDPARTY_LIB_PATH}/boost/include)
 
 add_executable(hello_tiger_server server.cpp)
-target_link_libraries(hello_tiger_server tiger tf_hello_tiger
+target_link_libraries(hello_tiger_server common tf_hello_tiger
 -Wl,-Bstatic
 -L${TIGER_THIRDPARTY_LIB_PATH}/thrift/lib -lthrift
 -lzlog

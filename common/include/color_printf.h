@@ -1,7 +1,7 @@
 #ifndef __COLOR_PRINTF_H__
 #define __COLOR_PRINTF_H__
 
-namespace tiger { namespace common { namespace util {
+namespace tiger { namespace common {
 
 enum PF_Color {
     BLACK = 30,
@@ -16,8 +16,7 @@ enum PF_Color {
 
 int color_printf(PF_Color color, const char *format, ...);
 
-} // namespace tiger
 } // namespace common
-} // namespace util
+} // namespace tiger
 
 #endif // __COLOR_PRINTF_H__

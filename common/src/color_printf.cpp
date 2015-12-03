@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string>
-namespace tiger { namespace common { namespace util {
+namespace tiger { namespace common {
 
 int color_printf(PF_Color color, const char *format, ...) {
     char color_format[4096];
@@ -15,4 +15,4 @@ int color_printf(PF_Color color, const char *format, ...) {
     return ret;
 }
 
-} } }
+} }

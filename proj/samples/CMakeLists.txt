@@ -38,19 +38,19 @@ target_link_libraries(gflagstest
 )
 
 add_executable(template EXCLUDE_FROM_ALL template.cpp)
-target_link_libraries(template tiger
+target_link_libraries(template common
 -Wl,-Bstatic
 -L${TIGER_THIRDPARTY_LIB_PATH}/gflags/lib -lgflags
 -L${TIGER_THIRDPARTY_LIB_PATH}/zlog/lib -lzlog
 -Wl,-Bdynamic
 -lpthread
 )
-add_dependencies(template tiger)
+add_dependencies(template common)
 
 COMPILE_PB_PATH(pb_files)
 add_executable(pb_test EXCLUDE_FROM_ALL pb_test.cpp
 ${TIGER_PB_OUTPUT_PATH}/proj/samples/pb_files/test.pb.cc)
-target_link_libraries(pb_test tiger
+target_link_libraries(pb_test common
 -Wl,-Bstatic
 -lprotobuf
 -lzlog
@@ -58,7 +58,7 @@ target_link_libraries(pb_test tiger
 -Wl,-Bdynamic
 -lpthread
 )
-add_dependencies(pb_test tiger)
+add_dependencies(pb_test common)
 COMPILE_TF_PATH(tf_files)
 
 aux_source_directory(${TIGER_TF_OUTPUT_PATH}/proj/samples/tf_files tf_tutorial_src_list)

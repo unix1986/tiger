@@ -2,7 +2,7 @@
 // You should copy it to another filename to avoid overwriting it.
 
 #include "proj/hello_tiger/tf_files/Echo.h"
-#include "common/framework/include/tiger.h"
+#include "common/include/tiger.h"
 #include <thrift/protocol/TBinaryProtocol.h>
 #include <thrift/server/TSimpleServer.h>
 #include <thrift/transport/TServerSocket.h>
